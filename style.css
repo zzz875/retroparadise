@@ -1,0 +1,477 @@
+/* ====================================================================
+   style.css
+   ==================================================================== */
+
+/* --------------------------------------------------------------------
+   1) COMMON STYLES (applied to all pages)
+   -------------------------------------------------------------------- */
+:root {
+  --text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text-color);
+  font-family: sans-serif;
+}
+
+/* Header (site-wide) */
+header {
+  height: 5rem;              /* matches Tailwind h-20 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 1.125rem;       /* matches Tailwind text-lg */
+  padding: 0 1.5rem;         /* matches Tailwind px-6 */
+}
+
+/* Footer (site-wide) */
+footer {
+  background: transparent;
+  color: #000;
+  padding: 2rem 2.5rem;
+}
+footer a {
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: text-decoration 0.2s;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Utility: copy link button */
+#copy-link-button {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+#copy-link-button:hover {
+  text-decoration: underline;
+}
+
+
+/* ====================================================================
+   2) CARS PAGE (animated gradient & cards)
+   --------------------------------------------------------------------
+   The <body> background is controlled by CSS variables --color1..--color4,
+   set via inline script in cars.html.
+   main.js applies the animation.
+   -------------------------------------------------------------------- */
+body {
+  background: linear-gradient(
+    to right,
+    var(--color1),
+    var(--color2),
+    var(--color3),
+    var(--color4)
+  );
+  background-size: 300% 300%;
+  animation: gradientBG 10s ease infinite;
+}
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Cards grid */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;    /* Tailwind gap-6 */
+  padding: 2rem;  /* Tailwind p-8 */
+}
+
+/* Card styles */
+.card {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;     /* Tailwind p-6 */
+  background: transparent;
+  height: 25rem;       /* Tailwind h-[400px] */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem; /* Tailwind rounded-[8px] */
+  overflow: hidden;
+  position: relative;
+}
+.card .media {
+  position: relative;
+  width: 100%;
+  height: 15.625rem;    /* Tailwind h-[250px] */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0 2.5rem;
+}
+.card .media img,
+.card .media video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18.125rem;      /* Tailwind w-[290px] */
+  border-radius: 0.5rem;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.card .media img { opacity: 0.9; }
+.card:hover .media img {
+  opacity: 0;
+  transform: scale(1.05) translateX(-50%);
+}
+.card .media video { opacity: 0; }
+.card:hover .media video {
+  opacity: 1;
+  transform: scale(1.05) translateX(-50%);
+}
+.card-title {
+  font-size: 1.25rem;    /* Tailwind text-xl */
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  transition: text-decoration 0.2s;
+}
+.card-title:hover { text-decoration: underline; }
+.card-desc { color: #F4CE14; }
+
+/* Large blocks */
+.large-block {
+  grid-column: span 2;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  background: transparent;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.large-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  transition: transform 0.3s;
+}
+.large-block img:hover { transform: scale(1.05); }
+
+
+/* ====================================================================
+   3) GAMING PAGE (animated gradient & cards)
+   --------------------------------------------------------------------
+   Identical structure to Cars page, but inline variables differ in gaming.html.
+   -------------------------------------------------------------------- */
+/* The same CSS from CARS PAGE above applies here as well for gaming.
+   Body gradient controlled by --color1..4 set in gaming.html,
+   and same card/grid styles. */
+
+
+/* ====================================================================
+   4) ABOUT US PAGE (about.html)
+   --------------------------------------------------------------------
+   Use <body class="about"> or <body class="about-us">
+   -------------------------------------------------------------------- */
+body.about,
+body.about-us {
+  /* override animated gradient */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #643CB9,
+    #563A9C
+  );
+}
+
+/* Bordered gradient box on About Us page */
+.gradient-box-bordered {
+  
+  border-top: 4px solid #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
+}
+
+
+/* ====================================================================
+   5) CONTACTS PAGE (contacts.html)
+   --------------------------------------------------------------------
+   Use <body class="contacts">
+   -------------------------------------------------------------------- */
+body.contacts {
+  /* override animated gradient */
+  background: linear-gradient(
+    to right,
+    #096B68,
+    #129990,
+    #90D1CA,
+    #FFE1E0
+  );
+  color: #ffffff;
+}
+
+/* .gradient-box-bordered (already defined) can be reused here */
+
+/* --------------------------------------------------------------------
+   1) COMMON STYLES (applied to all pages)
+   -------------------------------------------------------------------- */
+:root {
+  --text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text-color);
+  font-family: sans-serif;
+}
+
+/* Header (site-wide) */
+header {
+  height: 5rem;              /* matches Tailwind h-20 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 1.125rem;       /* matches Tailwind text-lg */
+  padding: 0 1.5rem;         /* matches Tailwind px-6 */
+}
+
+/* Footer (site-wide) */
+footer {
+  background: transparent;
+  color: #000;
+  padding: 2rem 2.5rem;
+}
+footer a {
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: text-decoration 0.2s;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Utility: copy link button */
+#copy-link-button {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+#copy-link-button:hover {
+  text-decoration: underline;
+}
+
+
+/* ====================================================================
+   2) ANIMATED GRADIENT BACKGROUND (Cars & Gaming)
+   --------------------------------------------------------------------
+   The <body> background is controlled by CSS variables --color1..--color4,
+   set via inline script in cars.html and gaming.html.
+   main.js applies the animation.
+   -------------------------------------------------------------------- */
+body {
+  background: linear-gradient(
+    to right,
+    var(--color1),
+    var(--color2),
+    var(--color3),
+    var(--color4)
+  );
+  background-size: 300% 300%;
+  animation: gradientBG 10s ease infinite;
+}
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Cards grid (Cars & Gaming) */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;    /* Tailwind gap-6 */
+  padding: 2rem;  /* Tailwind p-8 */
+}
+
+/* Card styles (Cars & Gaming) */
+.card {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;     /* Tailwind p-6 */
+  background: transparent;
+  height: 25rem;       /* Tailwind h-[400px] */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem; /* Tailwind rounded-[8px] */
+  overflow: hidden;
+  position: relative;
+}
+.card .media {
+  position: relative;
+  width: 100%;
+  height: 15.625rem;    /* Tailwind h-[250px] */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0 2.5rem;
+}
+.card .media img,
+.card .media video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18.125rem;      /* Tailwind w-[290px] */
+  border-radius: 0.5rem;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.card .media img { opacity: 0.9; }
+.card:hover .media img {
+  opacity: 0;
+  transform: scale(1.05) translateX(-50%);
+}
+.card .media video { opacity: 0; }
+.card:hover .media video {
+  opacity: 1;
+  transform: scale(1.05) translateX(-50%);
+}
+.card-title {
+  font-size: 1.25rem;    /* Tailwind text-xl */
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  transition: text-decoration 0.2s;
+}
+.card-title:hover { text-decoration: underline; }
+.card-desc { color: #F4CE14; }
+
+/* Large blocks (Cars & Gaming) */
+.large-block {
+  grid-column: span 2;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  background: transparent;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.large-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  transition: transform 0.3s;
+}
+.large-block img:hover { transform: scale(1.05); }
+
+
+/* ====================================================================
+   3) ABOUT US PAGE (about.html)
+   --------------------------------------------------------------------
+   Use <body class="about"> or <body class="about-us">
+   -------------------------------------------------------------------- */
+body.about,
+body.about-us {
+  /* override animated gradient */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #643CB9,
+    #563A9C
+  );
+}
+
+/* Bordered gradient box on About Us page */
+.gradient-box-bordered {
+  
+  border-top: 4px solid #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
+}
+
+
+/* ====================================================================
+   4) CONTACTS PAGE (contacts.html)
+   --------------------------------------------------------------------
+   Use <body class="contacts">
+   -------------------------------------------------------------------- */
+body.contacts {
+  /* override animated gradient */
+  background: linear-gradient(
+    to right,
+    #096B68,
+    #129990,
+    #90D1CA,
+    #FFE1E0
+  );
+  color: #ffffff;
+}
+
+/* .gradient-box-bordered (already defined above) can be used here too */
+
+
+/* --------------------------------------------------------------------
+   6) REGISTER PAGE (register.html)
+   --------------------------------------------------------------------
+   Use <body class="register">
+   Form container styled with .gradient-box-bordered and custom input styles
+   -------------------------------------------------------------------- */
+body.register {
+  background: linear-gradient(
+    to right,
+    #096B68,
+    #129990,
+    #90D1CA,
+    #FFE1E0
+  );
+  color: #ffffff;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+/* Gradient boxed form sections in register page */
+.register .gradient-box-bordered {
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+}
+
+/* Register form specific styles */
+.register form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register input[type="text"],
+.register input[type="email"],
+.register input[type="tel"] {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.register input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.5);
+}
+
+.register button[type="submit"] {
+  background: #9b2cba;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.register button[type="submit"]:hover {
+  background: #d53f8c;
+}
+

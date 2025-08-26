@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - RetroParadise</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Шапка -->
+    <header class="main-header">
+        <!-- Логотип в левом углу -->
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="icons/logoII.png" alt="RetroParadise Logo" class="logo">
+            </a>
+        </div>
+
+        <!-- Навигация + кнопки справа -->
+        <nav class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="gaming.html" class="nav-link">Gaming Side</a>
+            <a href="cars.html" class="nav-link">Carguys side</a>
+            <a href="forums.html" class="nav-link">Forums</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="#" id="copy-link" class="nav-link">Link</a>
+
+            <!-- Кнопки входа -->
+            <div class="auth-buttons">
+                <a href="signin.html" class="signin-btn">Sign In</a>
+                <a href="register.html" class="register-btn">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Первый градиентный блок -->
+    <section class="gradient-section gradient-box">
+        <h2 class="sr-only">Retro Tech Introduction</h2>
+        <div class="section-content">
+            <!-- Фото слева -->
+            <div class="image-container">
+                <img src="images/ps1.png" alt="PlayStation 1 Console" class="section-image">
+            </div>
+            
+            <!-- Текст справа -->
+            <div class="text-content">
+                <a href="#" class="main-heading">RetroParadise – dive into <br>Retro Tech!</a>
+        
+                <div class="description">
+                    <p>Welcome to RetroParadise, where classic game consoles, iconic gadgets, and legendary cars come back to life.</p>
+                    <p>Explore gaming history – from NES to PlayStation 2. Discover unique retro gadgets and forgotten tech. Learn how to restore and upgrade old devices. Relive the golden age of classic cars. Step into the past and rediscover the future!</p>
+        
+                    <p class="cta-link">
+                        <a href="#">→ Start exploring now!</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Второй градиентный блок с черной ободкой и фото справа -->
+<section class="gradient-section gradient-box-bordered">
+    <h2 class="sr-only">Classic Cars Information</h2>
+    <div class="section-content">
+       <!-- Текст слева -->
+            <div class="w-1/2 flex flex-col items-start justify-center pl-4">
+                <a href="#" class="text-4xl font-bold text-[#FFF200] mb-6 text-left hover:underline transition duration-200">
+                    Classic Cars of the 80s & 90s
+                </a>
+
+                <div class="max-w-xl text-left">
+                    <p class="text-white text-lg mb-3">
+                        The Golden Era of Automotive Design<br>
+                        The 80s and 90s brought some of the most stylish and fun-to-drive cars. Here are a few legendary classics:<br>
+                        Toyota Supra MK4 (1993-2002) – A turbocharged icon of the JDM world.<br>
+                        Nissan Skyline GT-R (R32, R33, R34) – The legendary Godzilla.<br>
+                        Ferrari F40 (1987-1992) – One of the most iconic supercars ever made.<br>
+                        DMC DeLorean (1981-1983) – The futuristic car made famous by Back to the Future.
+                    </p>
+                    <div class="text-white text-lg space-y-1 text-left">
+                        <div>
+                            Explore gaming history – from NES to PlayStation 2. Discover unique
+                            retro gadgets and forgotten tech. Learn how to restore and upgrade old devices. Relive the golden age of classic cars. Step into the past and rediscover the future!
+                        </div>
+                    </div>
+
+                    <p class="text-white text-lg font-semibold mt-2">
+                        <a href="#" class="hover:underline cursor-pointer transition duration-200">
+                            → Read more!
+                        </a>
+                    </p>
+            </div>
+        </div>
+
+        <!-- Фото справа -->
+        <div class="image-container right-aligned">
+            <img src="images/AE86.png" alt="Toyota AE86 Car" class="section-image">
+        </div>
+    </div>
+</section>
+
+    <!-- Подвал -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <!-- Левый столбик (соцсети) -->
+            <div class="social-links">
+                <a href="#" class="social-icon">
+                    <img src="icons/git.png" alt="GitHub">
+                </a>
+                <a href="#" class="social-icon">
+                    <img src="icons/youtube.png" alt="Youtube">
+                </a>
+                <a href="#" class="social-icon">
+                    <img src="icons/insta.png" alt="Instagram">
+                </a>
+            </div>
+
+            <!-- Колонки меню -->
+            <div class="footer-column">
+                <h3>Explore RetroParadise</h3>
+                <a href="#">How to Use RetroParadise</a>
+                <a href="#">Explore Retro Tech</a>
+                <a href="#">UI Design of Classic Consoles</a>
+                <a href="#">UX Behind 80s Gadgets</a>
+                <a href="#">Gaming Console Blueprints</a>
+                <a href="#">Tech Evolution Diagrams</a>
+                <a href="#">Creative Retro Brainstorms</a>
+                <a href="#">Our Vintage Whiteboard</a>
+                <a href="#">Community Garage (Forum)</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Create with RetroParadise</h3>
+                <a href="#">Discover Retro Worlds</a>
+                <a href="#">Classic Tech Aesthetics</a>
+                <a href="#">Console Restoration Projects</a>
+                <a href="#">Tuning & Upgrading Consoles</a>
+                <a href="#">System Architecture of Classics</a>
+                <a href="#">Join Retro Creators</a>
+                <a href="#">Evolution of Device Design</a>
+                <a href="#">Retro Jam Sessions</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>RetroParadise Resources</h3>
+                <a href="#">Retro Resources</a>
+                <a href="#">Retro Journal</a>
+                <a href="#">Old-School Practices</a>
+                <a href="#">Retro Palettes</a>
+                <a href="#">CRT Color Wheel</a>
+                <a href="#">Help Booth</a>
+                <a href="#">Tech Tinkerers</a>
+                <a href="#">The Archive Room</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('copy-link').addEventListener('click', function() {
+            navigator.clipboard.writeText(window.location.origin + '/links.html');
+            alert('Link copied to clipboard!');
+        });
+    </script>
+</body>
+</html>

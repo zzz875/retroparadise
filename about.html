@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      document.documentElement.style.setProperty('--color1', '#000000');
+      document.documentElement.style.setProperty('--color2', '#643CB9');
+      document.documentElement.style.setProperty('--color3', '#643CB9');
+      document.documentElement.style.setProperty('--color4', '#563A9C');
+    </script>
+  </head>
+  <body class="text-white font-sans min-h-screen">
+
+    <!-- Шапка -->
+    <header class="h-20 flex items-center justify-between bg-black bg-opacity-30 text-lg px-6">
+      <div>
+        <a href="index.html">
+          <img src="icons/logoII.png" alt="Logo" class="h-10 w-auto">
+        </a>
+      </div>
+
+      <nav class="flex items-center space-x-6">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="gaming.html" class="hover:underline">Gaming Side</a>
+        <a href="cars.html" class="hover:underline">Carguys Side</a>
+        <a href="forums.html" class="hover:underline">Forums</a>
+        <a href="about.html" class="hover:underline">About Us</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+        <a href="#" onclick="navigator.clipboard.writeText(window.location.origin + '/links.html'); alert('Link copied to clipboard!')" class="hover:underline">
+          Link
+        </a>
+
+        <div class="flex space-x-4 ml-4">
+          <a href="signin.html" class="bg-white text-black px-4 py-1 rounded-md font-semibold hover:bg-gray-200 transition">
+            Sign In
+          </a>
+          <a href="register.html" class="bg-black text-white border border-white px-4 py-1 rounded-md font-semibold hover:bg-white hover:text-black transition">
+            Register
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Первый блок -->
+    <section class="w-full min-h-[500px] px-4 py-6 gradient-box">
+      <div class="flex items-center justify-center h-full">
+        <div class="w-full max-w-3xl flex flex-col items-center justify-center text-center mt-10">
+          <h2 class="text-4xl font-bold text-[#FFF200] mb-6 hover:underline transition duration-200">
+            About us
+          </h2>
+          <p class="text-white text-lg mb-3">
+            At RetroParadise, we believe there's a deeper, more inspiring way to connect with the past. Not just through nostalgia, but through exploration, restoration, and reimagination. We're passionate about timeless design, enduring technology, and the cultural spirit of the 80s and 90s. Our mission is to celebrate this golden era by bringing it back to life — through curated content, community stories, and guides that make retro cars, games, and gadgets accessible to everyone. In a world that’s always rushing forward, we help people rediscover the beauty of slowing down and looking back.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Второй блок -->
+    <section class="w-full h-[650px] px-4 py-6 gradient-box-bordered">
+      <div class="flex h-full">
+        <div class="w-1/2 flex justify-start items-start">
+          <img src="images/me.jpg" alt="Retro image" class="max-w-[600px] max-h-[580px] object-contain rounded-xl">
+        </div>
+
+        <div class="w-1/2 flex flex-col items-center justify-center text-center pr-40">
+          <h2 class="text-4xl font-bold text-[#FFF200] mb-6 hover:underline">Our Founding</h2>
+          <p class="text-white text-lg mb-3">
+            RetroCore was founded by Zaur Bashirov out of a deep love for the aesthetics and spirit of a past era — a time when technology had personality and design told a story. It began as a small passion project: just a blog and a few photo collections, curated by enthusiasts who spent hours restoring retro consoles, collecting rare car brochures, and digging into forgotten tech. What started as a place to share memories quickly grew into a vibrant community. Along the way, we began writing guides, building archives, and connecting with others who felt the same spark. RetroCore became more than just a website — it became a home for those who believe the past still has something important to say.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-transparent text-white py-8 px-10">
+        <div class="flex justify-start">
+            <!-- Левый столбик (соцсети) -->
+            <div class="flex items-start space-x-4 mt-2 mr-10">
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/git.png" alt="GitHub" class="w-7 h-auto">
+                </a>
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/youtube.png" alt="Youtube" class="w-7 h-auto">
+                </a>
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/insta.png" alt="Instagram" class="w-7 h-auto">
+                </a>
+            </div>
+
+            <!-- Колонки меню -->
+            <div class="flex flex-col space-y-2 text-left">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">Explore RetroParadise</h2>
+                <a href="#" class="hover:underline transition duration-200">How to Use RetroParadise</a>
+                <a href="#" class="hover:underline transition duration-200">Explore Retro Tech</a>
+                <a href="#" class="hover:underline transition duration-200">UI Design of Classic Consoles</a>
+                <a href="#" class="hover:underline transition duration-200">UX Behind 80s Gadgets</a>
+                <a href="#" class="hover:underline transition duration-200">Gaming Console Blueprints</a>
+                <a href="#" class="hover:underline transition duration-200">Tech Evolution Diagrams</a>
+                <a href="#" class="hover:underline transition duration-200">Creative Retro Brainstorms</a>
+                <a href="#" class="hover:underline transition duration-200">Our Vintage Whiteboard</a>
+                <a href="#" class="hover:underline transition duration-200">Community Garage (Forum)</a>
+            </div>
+
+            <div class="flex flex-col space-y-2 text-left ml-12">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">Create with RetroParadise</h2>
+                <a href="#" class="hover:underline transition duration-200">Discover Retro Worlds</a>
+                <a href="#" class="hover:underline transition duration-200">Classic Tech Aesthetics</a>
+                <a href="#" class="hover:underline transition duration-200">Console Restoration Projects</a>
+                <a href="#" class="hover:underline transition duration-200">Tuning & Upgrading Consoles</a>
+                <a href="#" class="hover:underline transition duration-200">System Architecture of Classics</a>
+                <a href="#" class="hover:underline transition duration-200">Join Retro Creators</a>
+                <a href="#" class="hover:underline transition duration-200">Evolution of Device Design</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Jam Sessions</a>
+            </div>
+
+            <div class="flex flex-col space-y-2 text-left ml-12">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">RetroParadise Resources</h2>
+                <a href="#" class="hover:underline transition duration-200">Retro Resources</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Journal</a>
+                <a href="#" class="hover:underline transition duration-200">Old-School Practices</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Palettes</a>
+                <a href="#" class="hover:underline transition duration-200">CRT Color Wheel</a>
+                <a href="#" class="hover:underline transition duration-200">Help Booth</a>
+                <a href="#" class="hover:underline transition duration-200">Tech Tinkerers</a>
+                <a href="#" class="hover:underline transition duration-200">The Archive Room</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

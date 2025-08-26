@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DMC Engine page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: linear-gradient(to right, #7F1F76, #000000);
+      }
+      .gradient-box {
+        
+        border-top: 4px solid black;
+      }
+      .gradient-box-bordered {
+        background: linear-gradient(to right, #000000, #000000);
+        border-top: 4px solid black;
+        border-bottom: 4px solid black;
+      }
+    </style>
+  </head>
+  <!-- Шапка -->
+<body class="text-white font-sans min-h-screen">
+  <header class="h-20 flex items-center justify-between bg-black bg-opacity-30 text-lg px-6">
+    
+    <!-- Логотип в левом углу -->
+    <div>
+      <a href="index.html">
+        <img src="icons/logoII.png" alt="Logo" class="h-10 w-auto" />
+      </a>
+    </div>
+
+    <!-- Навигация + кнопки справа -->
+    <div class="flex items-center space-x-6">
+      <a href="index.html" class="hover:underline transition duration-200">Home</a>
+      <a href="gaming.html" class="hover:underline transition duration-200">Gaming Side</a>
+      <a href="cars.html" class="hover:underline transition duration-200">Carguys side</a>
+      <a href="forums.html" class="hover:underline transition duration-200">Forums</a>
+      <a href="about.html" class="hover:underline transition duration-200">About Us</a>
+      <a href="contact.html" class="hover:underline transition duration-200">Contact</a>
+      <a 
+        href="#" 
+        onclick="navigator.clipboard.writeText(window.location.origin + '/links.html'); alert('Link copied to clipboard!')" 
+        class="hover:underline transition duration-200">
+        Link
+      </a>
+
+      <!-- Кнопки входа -->
+      <div class="flex space-x-4 ml-4">
+        <a href="signin.html" class="bg-white text-black px-4 py-1 rounded-md font-semibold hover:bg-gray-200 transition">
+          Sign In
+        </a>
+        <a href="register.html" class="bg-black text-white border border-white px-4 py-1 rounded-md font-semibold hover:bg-white hover:text-black transition">
+          Register
+        </a>
+      </div>
+    </div>
+  </header>
+</body>
+
+   <!-- Первый градиентный блок -->
+<section class="w-full min-h-[500px] px-4 py-6 gradient-box">
+    <div class="flex items-center h-full">
+      <!-- Фото слева -->
+      <div class="w-1/2 flex justify-start items-center pr-4">
+        <img
+          src="images/dmc.jpg"
+          alt="DMC-12"
+          class="w-[500px] h-auto object-contain"
+        />
+      </div>
+  
+      <!-- Текст и таблица -->
+      <div class="w-1/2 flex flex-col items-start justify-start -ml-60">
+        <a href="#" class="text-4xl font-bold text-[#FFFFFF] mb-4 hover:underline transition duration-200">
+          Delorean DMC-12 <br /> 1981 - 1983
+        </a>
+  
+        <h2 class="text-white text-lg font-semibold mb-3">
+            Did you know that the legendary DeLorean DMC-12 almost never saw the light of day? The DeLorean Motor Company was founded by former GM vice president John DeLorean, who dreamed of creating a revolutionary supercar. But things didn't go as planned...
+Scandal, bankruptcy, and arrest!
+In 1982, John DeLorean was accused of drug smuggling, allegedly to save his company from bankruptcy. Although he was later acquitted, production of the DMC-12 was stopped, and only around 9,000 units were ever made.
+But here's the strangest part: some of these cars are still sealed in containers, waiting for their moment. Maybe one of them could become your time machine?
+            <br />
+            <br /> DMC-12 DeLorean Engine Variants
+        </h2>
+  
+        <div class="overflow-x-auto w-full">
+          <table class="table-auto w-full text-white text-left border border-gray-600">
+            <thead class="bg-gray-800">
+              <tr>
+                <th class="px-4 py-2 border border-gray-600">Variant</th>
+                <th class="px-4 py-2 border border-gray-600">Engine</th>
+                <th class="px-4 py-2 border border-gray-600">Horsepower</th>
+                <th class="px-4 py-2 border border-gray-600">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="bg-gray-900">
+              <tr>
+                <td class="px-4 py-2 border border-gray-600">Standard</td>
+                <td class="px-4 py-2 border border-gray-600">2.85L PRV V6</td>
+                <td class="px-4 py-2 border border-gray-600">130 hp</td>
+                <td class="px-4 py-2 border border-gray-600">Original factory engine</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-600">BHP Upgrade</td>
+                <td class="px-4 py-2 border border-gray-600">Modified PRV V6</td>
+                <td class="px-4 py-2 border border-gray-600">~150 hp</td>
+                <td class="px-4 py-2 border border-gray-600">Performance tuning by enthusiasts</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-600">Electric Conversion</td>
+                <td class="px-4 py-2 border border-gray-600">EV Motor (varies)</td>
+                <td class="px-4 py-2 border border-gray-600">100–300+ hp</td>
+                <td class="px-4 py-2 border border-gray-600">Modern EV swaps by custom shops</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-600">LS Swap</td>
+                <td class="px-4 py-2 border border-gray-600">Chevy LS V8</td>
+                <td class="px-4 py-2 border border-gray-600">300–500+ hp</td>
+                <td class="px-4 py-2 border border-gray-600">Radical custom conversion</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Второй градиентный блок с черной ободкой и видео, которое занимает весь блок -->
+<!-- Второй градиентный блок с черной ободкой и видео, которое занимает весь блок -->
+<section class="w-full h-[600px] px-4 py-6 gradient-box-bordered">
+    <!-- Видео, которое полностью заполняет блок -->
+    <div class="w-full h-full">
+      <video class="w-full h-full object-cover" controls>
+        <source src="videos/DMC2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+<!-- Подвал -->
+    <footer class="bg-transparent text-white py-8 px-10">
+        <div class="flex justify-start">
+            <!-- Левый столбик (соцсети) -->
+            <div class="flex items-start space-x-4 mt-2 mr-10">
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/git.png" alt="GitHub" class="w-7 h-auto">
+                </a>
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/youtube.png" alt="Youtube" class="w-7 h-auto">
+                </a>
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/insta.png" alt="Instagram" class="w-7 h-auto">
+                </a>
+            </div>
+
+            <!-- Колонки меню -->
+            <div class="flex flex-col space-y-2 text-left">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">Explore RetroParadise</h2>
+                <a href="#" class="hover:underline transition duration-200">How to Use RetroParadise</a>
+                <a href="#" class="hover:underline transition duration-200">Explore Retro Tech</a>
+                <a href="#" class="hover:underline transition duration-200">UI Design of Classic Consoles</a>
+                <a href="#" class="hover:underline transition duration-200">UX Behind 80s Gadgets</a>
+                <a href="#" class="hover:underline transition duration-200">Gaming Console Blueprints</a>
+                <a href="#" class="hover:underline transition duration-200">Tech Evolution Diagrams</a>
+                <a href="#" class="hover:underline transition duration-200">Creative Retro Brainstorms</a>
+                <a href="#" class="hover:underline transition duration-200">Our Vintage Whiteboard</a>
+                <a href="#" class="hover:underline transition duration-200">Community Garage (Forum)</a>
+            </div>
+
+            <div class="flex flex-col space-y-2 text-left ml-12">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">Create with RetroParadise</h2>
+                <a href="#" class="hover:underline transition duration-200">Discover Retro Worlds</a>
+                <a href="#" class="hover:underline transition duration-200">Classic Tech Aesthetics</a>
+                <a href="#" class="hover:underline transition duration-200">Console Restoration Projects</a>
+                <a href="#" class="hover:underline transition duration-200">Tuning & Upgrading Consoles</a>
+                <a href="#" class="hover:underline transition duration-200">System Architecture of Classics</a>
+                <a href="#" class="hover:underline transition duration-200">Join Retro Creators</a>
+                <a href="#" class="hover:underline transition duration-200">Evolution of Device Design</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Jam Sessions</a>
+            </div>
+
+            <div class="flex flex-col space-y-2 text-left ml-12">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">RetroParadise Resources</h2>
+                <a href="#" class="hover:underline transition duration-200">Retro Resources</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Journal</a>
+                <a href="#" class="hover:underline transition duration-200">Old-School Practices</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Palettes</a>
+                <a href="#" class="hover:underline transition duration-200">CRT Color Wheel</a>
+                <a href="#" class="hover:underline transition duration-200">Help Booth</a>
+                <a href="#" class="hover:underline transition duration-200">Tech Tinkerers</a>
+                <a href="#" class="hover:underline transition duration-200">The Archive Room</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

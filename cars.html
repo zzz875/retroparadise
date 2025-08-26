@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carguys side</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Подключаем общий CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Задаём цвета градиента для этой страницы -->
+  <script>
+    document.documentElement.style.setProperty('--color1', '#AD005F');
+    document.documentElement.style.setProperty('--color2', '#9B1C5A');
+    document.documentElement.style.setProperty('--color3', '#612897');
+    document.documentElement.style.setProperty('--color4', '#0C1E7F');
+  </script>
+
+  <!-- Подключаем общий JS-анимацию -->
+  <script src="main.js" defer></script>
+</head>
+
+<body class="text-white font-sans min-h-screen">
+  <header class="h-20 flex items-center justify-between bg-black bg-opacity-30 text-lg px-6">
+    <div>
+      <a href="index.html">
+        <img src="icons/logoII.png" alt="Logo" class="h-10 w-auto" />
+      </a>
+    </div>
+    <div class="flex items-center space-x-6">
+      <a href="index.html" class="hover:underline transition duration-200">Home</a>
+      <a href="gaming.html" class="hover:underline transition duration-200">Gaming Side</a>
+      <a href="cars.html" class="hover:underline transition duration-200">Carguys side</a>
+      <a href="forums.html" class="hover:underline transition duration-200">Forums</a>
+      <a href="about.html" class="hover:underline transition duration-200">About Us</a>
+      <a href="contact.html" class="hover:underline transition duration-200">Contact</a>
+      <a 
+        href="#" 
+        onclick="navigator.clipboard.writeText(window.location.origin + '/links.html'); alert('Link copied to clipboard!')" 
+        class="hover:underline transition duration-200">
+        Link
+      </a>
+      <div class="flex space-x-4 ml-4">
+        <a href="signin.html" class="bg-white text-black px-4 py-1 rounded-md font-semibold hover:bg-gray-200 transition">
+          Sign In
+        </a>
+        <a href="register.html" class="bg-black text-white border border-white px-4 py-1 rounded-md font-semibold hover:bg-white hover:text-black transition">
+          Register
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Подключение внешнего JS-файла -->
+  <script src="cars.js"></script>
+</body>
+</html>
+
+    <!-- Контент -->
+    <section class="p-8">
+      <!-- 4 блока в ряд -->
+      <div class="grid grid-cols-4 gap-6">
+       <!-- Блок 1 -->
+<div class="border-2 border-white-500 p-6 bg-transparent h-[400px] flex flex-col items-center justify-between rounded-[8px] group">
+  <div class="w-full h-[250px] flex justify-center items-center mb-10 mt-4 relative"> <!-- Центрируем фото -->
+    <!-- Изображение -->
+    <img
+      src="images/850.jpg"
+      alt="850i"
+      class="w-[290px] h-auto object-contain mt-2 transition-transform transition-opacity duration-300 transform hover:scale-105 rounded-[8px] opacity-90 group-hover:opacity-0 absolute"
+    />
+
+    <!-- Видео -->
+    <video 
+      class="w-[290px] h-[300px] object-cover mt-2 transition-transform duration-300 transform hover:scale-105 rounded-[8px] opacity-0 group-hover:opacity-100 absolute" 
+      muted
+      loop
+      autoplay
+      playsinline
+    >
+      <source src="videos/850.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+
+  <!-- Кликабельный заголовок -->
+  <a href="bmw34.html" class="text-xl font-bold mb-1 hover:underline transition duration-200 text-[#FFFFFF]">
+    BMW 850i
+  </a>
+
+  <p class="text-[#FFFFFF]">Perfect example of retro future</p>
+</div>
+
+      <!-- Блок 2 -->
+<div class="border-2 border-white-500 p-6 bg-transparent h-[400px] flex flex-col items-center justify-between rounded-[8px] group">
+  <div class="w-full h-[250px] flex justify-center items-center mb-10 mt-4 relative">
+    <!-- Изображение -->
+    <img
+      src="images/e34.png"
+      alt="e34"
+      class="w-[290px] h-auto object-contain mt-2 transition-transform transition-opacity duration-300 transform hover:scale-105 rounded-[8px] opacity-90 group-hover:opacity-0 absolute"
+    />
+    
+    <!-- Видео -->
+    <video 
+      class="w-[290px] h-[300px] object-cover mt-2 transition-transform duration-300 transform hover:scale-105 rounded-[8px] opacity-0 group-hover:opacity-100 absolute" 
+      muted
+      loop
+      playsinline
+    >
+      <source src="videos/bmwe33.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+
+  <!-- Кликабельный заголовок -->
+  <a href="bmw34.html" class="text-xl font-bold mb-1 hover:underline transition duration-200 text-[#FFFFFF]">
+    BMW E34 HISTORY
+  </a>
+
+  <p class="text-[#FFFFFF]">The most iconic german car</p>
+</div>
+
+
+<!-- Скрипт -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const block = document.querySelector('.group');
+    const video = block.querySelector('video');
+
+    block.addEventListener('mouseenter', () => {
+      video.play().catch(e => {
+        console.log("Autoplay error:", e);
+      });
+    });
+
+    block.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+</script>
+
+
+        <!-- Блок 3 -->
+<div class="border-2 border-white-500 p-6 bg-transparent h-[400px] flex flex-col items-center justify-between rounded-[8px] group">
+  <div class="w-full h-[250px] flex justify-center items-center mb-10 mt-4 relative">
+    <!-- Изображение -->
+    <img
+      src="images/dmcengine.png"
+      alt="DMC"
+      class="w-[290px] h-auto object-contain mt-2 transition-transform transition-opacity duration-300 transform hover:scale-105 rounded-[8px] opacity-90 group-hover:opacity-0 absolute"
+    />
+    
+    <!-- Видео -->
+    <video 
+      class="w-[290px] h-[300px] object-cover mt-2 transition-transform duration-300 transform hover:scale-105 rounded-[8px] opacity-0 group-hover:opacity-100 absolute" 
+      muted
+      loop
+      autoplay
+      playsinline
+    >
+      <source src="videos/DMC.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+
+  <!-- Кликабельный заголовок -->
+  <a href="dmc.html" class="text-xl font-bold mb-1 hover:underline transition duration-200 text-[#FFFFFF]">
+    DMC Engine
+  </a>
+
+  <p class="text-[#FFFFFF]">What's the secret?</p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const block = document.querySelector('.group');
+    const video = block.querySelector('video');
+
+    block.addEventListener('mouseenter', () => {
+      video.play().catch(e => {
+        console.log("Autoplay error:", e);
+      });
+    });
+
+    block.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+</script>
+
+        <!-- Блок 4 -->
+<div class="border-2 border-white-500 p-6 bg-transparent h-[400px] flex flex-col items-center justify-between rounded-[8px] group">
+  <div class="w-full h-[260px] flex justify-center items-center mb-10 mt-4 relative"> <!-- Центрируем фото -->
+    <!-- Изображение -->
+    <img
+      src="images/countach2.jpg"
+      alt="Countach"
+      class="w-[290px] h-auto object-contain mt-2 transition-transform transition-opacity duration-300 transform hover:scale-105 rounded-[8px] opacity-80 group-hover:opacity-0 absolute"
+    />
+    
+    <!-- Видео -->
+    <video 
+      class="w-[290px] h-[300px] object-cover mt-2 transition-transform duration-300 transform hover:scale-105 rounded-[8px] opacity-0 group-hover:opacity-100 absolute" 
+      muted
+      loop
+      autoplay
+      playsinline
+    >
+      <source src="videos/countach.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+
+  <!-- Кликабельный заголовок -->
+  <a href="bmw34.html" class="text-xl font-bold mb-1 hover:underline transition duration-200 text-[#FFFFFF]">
+    Lamborgini Countach
+  </a>
+
+  <p class="text-[#FFFFFF]">A Symbol of Speed and Style</p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const block = document.querySelector('.group');
+    const video = block.querySelector('video');
+
+    block.addEventListener('mouseenter', () => {
+      video.play().catch(e => {
+        console.log("Autoplay error:", e);
+      });
+    });
+
+    block.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+</script>
+
+            
+                
+
+           
+
+            <!-- Нижний левый блок (занимает 2 колонки) -->
+<div class="col-span-2 border-2 border-white-500 p-6 bg-transparent flex flex-col items-center justify-between rounded-[8px]">
+  <div class="w-full h-auto flex justify-center items-center overflow-hidden">
+    <a href="images/c1000.jpg" target="_blank">
+      <img
+        src="images/c1000.jpg"
+        alt="Mersedes c1000"
+        class="w-[900px] h-[440px] max-w-full object-cover rounded-[8px] hover:scale-105 transition-transform duration-300"
+      />
+    </a>
+  </div>
+  <div class="flex flex-col items-center translate-y-[10px]">
+    <a href="retropc.html" class="text-xl font-bold mb-1 hover:underline transition duration-200 text-[#FFFFFF]">
+      Mersedes C1000
+    </a>
+    <p class="text-sm text-[#FFFFFF]">That one car from your dreams</p>
+  </div>
+</div>
+
+<!-- Нижний правый блок (тоже 2 колонки) -->
+<div class="col-span-2 border-2 border-white-500 p-6 bg-transparent flex flex-col items-center justify-between rounded-[8px]">
+  <div class="w-full h-auto flex justify-center items-center overflow-hidden">
+    <a href="images/ferrari.jpg" target="_blank">
+      <img
+        src="images/ferrari.jpg"
+        alt="Koenig Specials"
+        class="w-[900px] h-[440px] max-w-full object-cover rounded-[8px] hover:scale-105 transition-transform duration-300"
+      />
+    </a>
+  </div>
+  <div class="flex flex-col items-center translate-y-[10px]">
+    <a href="retropc.html" class="text-xl font-bold mb-0.5 hover:underline transition duration-200 text-[#FFFFFF]">
+      Koenig Specials monsters
+    </a>
+    <p class="text-sm text-[#FFFFFF]">That one car from your dreams</p>
+  </div>
+</div>
+
+</div>
+  
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-transparent text-white py-8 px-10">
+        <div class="flex justify-start">
+            <!-- Левый столбик (соцсети) -->
+            <div class="flex items-start space-x-4 mt-2 mr-10">
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/git.png" alt="GitHub" class="w-7 h-auto">
+                </a>
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/youtube.png" alt="Youtube" class="w-7 h-auto">
+                </a>
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/insta.png" alt="Instagram" class="w-7 h-auto">
+                </a>
+            </div>
+
+            <!-- Колонки меню -->
+            <div class="flex flex-col space-y-2 text-left">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">Explore RetroParadise</h2>
+                <a href="#" class="hover:underline transition duration-200">How to Use RetroParadise</a>
+                <a href="#" class="hover:underline transition duration-200">Explore Retro Tech</a>
+                <a href="#" class="hover:underline transition duration-200">UI Design of Classic Consoles</a>
+                <a href="#" class="hover:underline transition duration-200">UX Behind 80s Gadgets</a>
+                <a href="#" class="hover:underline transition duration-200">Gaming Console Blueprints</a>
+                <a href="#" class="hover:underline transition duration-200">Tech Evolution Diagrams</a>
+                <a href="#" class="hover:underline transition duration-200">Creative Retro Brainstorms</a>
+                <a href="#" class="hover:underline transition duration-200">Our Vintage Whiteboard</a>
+                <a href="#" class="hover:underline transition duration-200">Community Garage (Forum)</a>
+            </div>
+
+            <div class="flex flex-col space-y-2 text-left ml-12">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">Create with RetroParadise</h2>
+                <a href="#" class="hover:underline transition duration-200">Discover Retro Worlds</a>
+                <a href="#" class="hover:underline transition duration-200">Classic Tech Aesthetics</a>
+                <a href="#" class="hover:underline transition duration-200">Console Restoration Projects</a>
+                <a href="#" class="hover:underline transition duration-200">Tuning & Upgrading Consoles</a>
+                <a href="#" class="hover:underline transition duration-200">System Architecture of Classics</a>
+                <a href="#" class="hover:underline transition duration-200">Join Retro Creators</a>
+                <a href="#" class="hover:underline transition duration-200">Evolution of Device Design</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Jam Sessions</a>
+            </div>
+
+            <div class="flex flex-col space-y-2 text-left ml-12">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">RetroParadise Resources</h2>
+                <a href="#" class="hover:underline transition duration-200">Retro Resources</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Journal</a>
+                <a href="#" class="hover:underline transition duration-200">Old-School Practices</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Palettes</a>
+                <a href="#" class="hover:underline transition duration-200">CRT Color Wheel</a>
+                <a href="#" class="hover:underline transition duration-200">Help Booth</a>
+                <a href="#" class="hover:underline transition duration-200">Tech Tinkerers</a>
+                <a href="#" class="hover:underline transition duration-200">The Archive Room</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

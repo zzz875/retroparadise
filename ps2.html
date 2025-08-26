@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PS 2 page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+          background: linear-gradient(to right, #5409DA, #0030F0, #005380, #005157);
+        }
+       
+        .gradient-box-bordered {
+          border-top: 4px solid black;
+          border-bottom: 4px solid black;
+        }
+       
+        
+      </style>
+  </head>
+  <!-- Шапка -->
+<body class="text-white font-sans min-h-screen">
+  <header class="h-20 flex items-center justify-between bg-black bg-opacity-30 text-lg px-6">
+    
+    <!-- Логотип в левом углу -->
+    <div>
+      <a href="index.html">
+        <img src="icons/logoII.png" alt="Logo" class="h-10 w-auto" />
+      </a>
+    </div>
+
+    <!-- Навигация + кнопки справа -->
+    <div class="flex items-center space-x-6">
+      <a href="index.html" class="hover:underline transition duration-200">Home</a>
+      <a href="gaming.html" class="hover:underline transition duration-200">Gaming Side</a>
+      <a href="cars.html" class="hover:underline transition duration-200">Carguys side</a>
+      <a href="forums.html" class="hover:underline transition duration-200">Forums</a>
+      <a href="about.html" class="hover:underline transition duration-200">About Us</a>
+      <a href="contact.html" class="hover:underline transition duration-200">Contact</a>
+      <a 
+        href="#" 
+        onclick="navigator.clipboard.writeText(window.location.origin + '/links.html'); alert('Link copied to clipboard!')" 
+        class="hover:underline transition duration-200">
+        Link
+      </a>
+
+      <!-- Кнопки входа -->
+      <div class="flex space-x-4 ml-4">
+        <a href="signin.html" class="bg-white text-black px-4 py-1 rounded-md font-semibold hover:bg-gray-200 transition">
+          Sign In
+        </a>
+        <a href="register.html" class="bg-black text-white border border-white px-4 py-1 rounded-md font-semibold hover:bg-white hover:text-black transition">
+          Register
+        </a>
+      </div>
+    </div>
+  </header>
+</body>
+
+    <!-- Первый блок с фоном-фотографией -->
+    <section
+    class="w-full min-h-[500px] px-4 py-6"
+    style="
+      background-image: url('images/ps22.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border-top: 4px solid black;
+      border-bottom: 4px solid black;
+    "
+  >
+    <!-- Полупрозрачный слой для затемнения фона -->
+    <div
+      style="
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 0;
+      "
+    ></div>
+  
+    <div class="flex items-center justify-center h-full relative z-10">
+      <!-- Текст по центру -->
+      <div class="w-1/2 flex flex-col items-center justify-center px-8 text-center">
+        <a href="#" class="text-4xl font-bold text-[#FFF200] mb-6 hover:underline transition duration-200">
+            PS2 Modding – Unlock Your Console's Potential!
+          </a>
+    
+          <div class="max-w-xl">
+            <p class="text-white text-lg mb-3">
+              Discover the exciting world of PlayStation 2 modding — from hardware upgrades to software hacks.
+            </p>
+            <div class="text-white text-lg space-y-1">
+              <div>Learn how to install modchips, use swap discs, and run homebrew applications. Expand your gaming library by playing backups and imports. Customize your PS2 with new interfaces and enhanced performance. Dive into a community of passionate modders and keep the classic console alive!</div>
+            </div>
+    
+            <p class="text-white text-lg font-semibold mt-2">
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="w-full h-[500px] px-4 py-6 gradient-box-bordered">
+    <div class="flex h-full">
+      <!-- Текст слева -->
+      <div class="w-1/2 flex flex-col items-start justify-center pl-4">
+        <a href="#" class="text-4xl font-bold text-[#FFF200] mb-6 text-left hover:underline transition duration-200">
+          PS2 Modding: Unlock New Possibilities
+        </a>
+  
+        <div class="max-w-xl text-left">
+          <p class="text-white text-lg mb-3">
+            Modding your PlayStation 2 opens a world of opportunities beyond standard gaming. From installing modchips that allow backup playback to using software exploits, enthusiasts can extend the console’s lifespan and capabilities.
+          </p>
+          <p class="text-white text-lg">
+            With PS2 modding, you can run homebrew apps, emulators, and even customize the system’s interface. This creative freedom breathes new life into a classic console, making it a favorite among retro gaming communities worldwide.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Фото справа -->
+      <div class="w-1/2 flex items-center justify-end pr-0">
+        <img
+          src="images/ps24.jpg"
+          alt="PlayStation 2"
+          class="max-w-[500px] max-h-[480px] object-contain rounded-[8px]"
+          style="margin-right: 0;"
+        />
+      </div>
+    </div>
+
+  
+</section>
+
+<!-- Подвал -->
+    <footer class="bg-transparent text-white py-8 px-10">
+        <div class="flex justify-start">
+            <!-- Левый столбик (соцсети) -->
+            <div class="flex items-start space-x-4 mt-2 mr-10">
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/git.png" alt="GitHub" class="w-7 h-auto">
+                </a>
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/youtube.png" alt="Youtube" class="w-7 h-auto">
+                </a>
+                <a href="#" class="hover:opacity-70 transition duration-200">
+                    <img src="icons/insta.png" alt="Instagram" class="w-7 h-auto">
+                </a>
+            </div>
+
+            <!-- Колонки меню -->
+            <div class="flex flex-col space-y-2 text-left">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">Explore RetroParadise</h2>
+                <a href="#" class="hover:underline transition duration-200">How to Use RetroParadise</a>
+                <a href="#" class="hover:underline transition duration-200">Explore Retro Tech</a>
+                <a href="#" class="hover:underline transition duration-200">UI Design of Classic Consoles</a>
+                <a href="#" class="hover:underline transition duration-200">UX Behind 80s Gadgets</a>
+                <a href="#" class="hover:underline transition duration-200">Gaming Console Blueprints</a>
+                <a href="#" class="hover:underline transition duration-200">Tech Evolution Diagrams</a>
+                <a href="#" class="hover:underline transition duration-200">Creative Retro Brainstorms</a>
+                <a href="#" class="hover:underline transition duration-200">Our Vintage Whiteboard</a>
+                <a href="#" class="hover:underline transition duration-200">Community Garage (Forum)</a>
+            </div>
+
+            <div class="flex flex-col space-y-2 text-left ml-12">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">Create with RetroParadise</h2>
+                <a href="#" class="hover:underline transition duration-200">Discover Retro Worlds</a>
+                <a href="#" class="hover:underline transition duration-200">Classic Tech Aesthetics</a>
+                <a href="#" class="hover:underline transition duration-200">Console Restoration Projects</a>
+                <a href="#" class="hover:underline transition duration-200">Tuning & Upgrading Consoles</a>
+                <a href="#" class="hover:underline transition duration-200">System Architecture of Classics</a>
+                <a href="#" class="hover:underline transition duration-200">Join Retro Creators</a>
+                <a href="#" class="hover:underline transition duration-200">Evolution of Device Design</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Jam Sessions</a>
+            </div>
+
+            <div class="flex flex-col space-y-2 text-left ml-12">
+                <h2 class="text-xl font-bold text-[#FEFCDD] mb-4">RetroParadise Resources</h2>
+                <a href="#" class="hover:underline transition duration-200">Retro Resources</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Journal</a>
+                <a href="#" class="hover:underline transition duration-200">Old-School Practices</a>
+                <a href="#" class="hover:underline transition duration-200">Retro Palettes</a>
+                <a href="#" class="hover:underline transition duration-200">CRT Color Wheel</a>
+                <a href="#" class="hover:underline transition duration-200">Help Booth</a>
+                <a href="#" class="hover:underline transition duration-200">Tech Tinkerers</a>
+                <a href="#" class="hover:underline transition duration-200">The Archive Room</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

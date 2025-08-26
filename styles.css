@@ -1,0 +1,253 @@
+/* Base styles */
+body {
+    background: linear-gradient(to right, #384d8f, #6d458C, #87217D);
+    color: white;
+    font-family: sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header styles */
+.main-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0 24px;
+    font-size: 18px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 16px;
+    margin-left: 16px;
+}
+
+.signin-btn {
+    background-color: white;
+    color: black;
+    padding: 4px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.signin-btn:hover {
+    background-color: #e5e5e5;
+}
+
+.register-btn {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 4px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.register-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Gradient sections */
+.gradient-section {
+    width: 100%;
+    min-height: 500px;
+    padding: 24px;
+}
+
+.gradient-box {
+    background: linear-gradient(to right, #75439C, #000000);
+}
+
+.gradient-box-bordered {
+    background: linear-gradient(to right, #000000, #75439C);
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.reversed {
+    flex-direction: row-reverse;
+}
+
+.image-container {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 24px;
+}
+
+/* Новый стиль для контейнера с фото AE86 */
+.ae86-image-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end; /* Изменено с center на flex-end */
+    align-items: end;
+    padding: 0;
+}
+
+.section-image {
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Новый стиль для фото AE86 */
+.ae86-image {
+    max-width: 500px;
+    max-height: 480px;
+    object-fit: contain;
+    margin-right: 0; /* Убедимся, что нет отступа справа */
+}
+
+.text-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+}
+
+.left-align {
+    align-items: flex-start;
+}
+
+.main-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFF200;
+    margin-bottom: 24px;
+    text-decoration: none;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.main-heading:hover {
+    text-decoration: underline;
+}
+
+.description {
+    max-width: 36rem;
+    font-size: 18px;
+    text-align: center;
+}
+
+.description p {
+    margin-bottom: 12px;
+}
+
+.cta-link {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.cta-link a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.cta-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+.main-footer {
+    background-color: transparent;
+    color: white;
+    padding: 32px 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+    margin-right: 40px;
+}
+
+.social-icon img {
+    width: 28px;
+    height: auto;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    margin-left: 48px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FEFCDD;
+    margin-bottom: 16px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
